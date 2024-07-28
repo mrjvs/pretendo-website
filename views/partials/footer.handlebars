@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="/assets/css/partials/footer.css" /></link>
+{{#section 'head'}}
+	<link rel="stylesheet" href="/assets/css/partials/footer.css" />
+{{/section}}
 
 <footer>
 	<div>
@@ -24,12 +26,13 @@
 				</text>
 			</g>
 		</svg>
-		<p>Copyright 2022</p>
-		<p>Site by <a href="https://mrjvs.com/" target="_blank">mrjvs</a>, <a href="https://jipfr.nl/" target="_blank">jipfr</a> & <a href="https://ashm.dev/" target="_blank">monty</a></p>
+		<p>Copyright 2024</p>
+		<p>Site by <a href="https://mrjvs.com/" target="_blank">mrjvs</a>, <a href="https://jipfr.nl/" target="_blank">jipfr</a> & <a href="https://limes.pink/" target="_blank">pinklimes</a></p>
 	</div>
 	<div>
 		<h1>{{ locale.footer.socials }}</h1>
 		<a href="https://twitter.com/PretendoNetwork/" target="_blank">Twitter</a>
+		<a href="https://mastodon.pretendo.network/@pretendo" target="_blank" rel="me">Mastodon</a>
 		<a href="https://invite.gg/pretendo" target="_blank">Discord</a>
 		<a href="https://github.com/PretendoNetwork" target="_blank">GitHub</a>
 	</div>
@@ -62,32 +65,40 @@
 		</div>
 	</div>
 </footer>
-<script>
-	const bandwidthRaccoon = document.querySelector("footer img.bandwidth-raccoon");
-	const bandwidthRaccoonWrapper = document.querySelector("footer .bandwidth-raccoon-wrapper");
-	const bandwidthRaccoonBubbleText = document.querySelector("footer .bandwidth-raccoon-wrapper .text-bubble p");
-	let i = 0;
 
-	function unescapeHTML(string) {
-  	const el = document.createElement("span");
-  	el.innerHTML = string;
-  	return el.innerText;
-	}
+{{#section 'foot'}}
+	<script>
+		const bandwidthRaccoon = document.querySelector("footer img.bandwidth-raccoon");
+		const bandwidthRaccoonWrapper = document.querySelector("footer .bandwidth-raccoon-wrapper");
+		const bandwidthRaccoonBubbleText = document.querySelector("footer .bandwidth-raccoon-wrapper .text-bubble p");
+		let i = 0;
 
-
-	const randomSentences = [
-	{{#each locale.footer.bandwidthRaccoonQuotes}}
-		`${unescapeHTML("{{this}}")}`,
-	{{/each}}
-	]
-
-	bandwidthRaccoon.addEventListener("click", () =>
-	{
-		bandwidthRaccoonWrapper.classList.add("speak");
-		if (!randomSentences[i]) {
-			i = 0
+		function unescapeHTML(string) {
+			const el = document.createElement("span");
+			el.innerHTML = string;
+			return el.innerText;
 		}
-		bandwidthRaccoonBubbleText.innerText = randomSentences[i];
-		i += 1;
-	})
-</script>
+
+
+		const randomSentences = [
+		{{#each locale.footer.bandwidthRaccoonQuotes}}
+			`${unescapeHTML("{{this}}")}`,
+		{{/each}}
+		]
+		
+		document.body.addEventListener("click", () =>
+		{
+			bandwidthRaccoonWrapper.classList.remove("speak");
+		})
+		bandwidthRaccoon.addEventListener("click", (event) =>
+		{
+			event.stopPropagation();
+			bandwidthRaccoonWrapper.classList.add("speak");
+			if (!randomSentences[i]) {
+				i = 0
+			}
+			bandwidthRaccoonBubbleText.innerText = randomSentences[i];
+			i += 1;
+		})
+	</script>
+{{/section}}

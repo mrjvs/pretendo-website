@@ -39,10 +39,6 @@
 	},
 	"progress": {
 		"title": "Postęp",
-		"paragraphs": [
-			null,
-			"Mówiąc o konsoli 3DS, aktualnie pracujemy również nad Mario Kart 7, a w przyszłości mamy nadzieję, że możemy popracować nad innymi grami."
-		],
 		"githubRepo": "Repozytorium GitHub"
 	},
 	"faq": {
@@ -67,7 +63,7 @@
 			},
 			{
 				"question": "Czy Pretendo działa na Cemu/emulatorach?",
-				"answer": "Pretendo jest głównie zaprojektowane dla prawdziwych konsol Wii U i 3DS; w tej chwili jedynym emulatorem tych konsol z obsługą Nintendo Network jest Cemu. Cemu oficjalnie nie wspiera naszych serwerów, ale możliwe, że mimo tego zadziałają.<br>Pretendo aktualnie nie wspiera Cemu."
+				"answer": "Pretendo wspiera wszystko co interaktuje z Nintendo Network, Jedyny emulator który wspiera taką funkcjonalnośc jest Cemu. Cemu 2.0 oficjalnie wspiera Pretendo pod twoimi ustawieniami konta w emulatorze. Dla informacji jak zacząć z Cemu, zapoznaj się z <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Citra nie wspiera prawdziwej gry online, więc dlatego nie działa z Pretendo, i w ogóle nie pokazuje żadnych znaków wspierania prawdziwej gry online. Mikage, emulator 3DS na telefonach może zacząć wspierać tą funkcjonalność w przyszłości, lecz jest to daleko od pewności."
 			},
 			{
 				"question": "Jeśli jestem zbanowany na Nintendo Network, czy będę również zbanowany na Pretendo?",
@@ -103,112 +99,11 @@
 	},
 	"credits": {
 		"title": "Nasz zespół",
-		"text": "Poznaj zespół, który tworzy projekt",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Właściciel projektu i główny programista",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Research w sprawie Miiverse oraz programowanie",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Instalator sieci i research w sprawie konsoli",
-				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/Rambo6Glaz"
-			},
-			{
-				"name": "quarky",
-				"caption": "Research w sprawie BOSS oraz programowanie łatek",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Research w sprawie konsoli i innych systemów",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "Jip Fr",
-				"caption": "Kierownik programowania webowego",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
-				"name": "monty",
-				"caption": "Programowanie webowe",
-				"picture": "https://github.com/ashmonty.png",
-				"github": "https://github.com/ashmonty"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Projektant",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			}
-		]
+		"text": "Poznaj zespół, który tworzy projekt"
 	},
 	"specialThanks": {
 		"title": "Specjalne podziękowania",
-		"text": "Bez nich, Pretendo nie byłoby w takim stanie jak teraz.",
-		"people": [
-			{
-				"name": "superwhiskers",
-				"caption": "Zaprogramowanie biblioteki crunch",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "Programista 3DS oraz dysektor NEX",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "Archiwista danych",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Research w sprawie Mario Kart 7 i 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "rverse",
-				"caption": "Udostępnianie informacji Miiverse",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Specjalne podziękowania",
-				"caption": "Research w sprawie struktur danych Nintendo",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Ikony do edytora Mii oraz reakcje do Juxt",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Współtwórcy z GitHub",
-				"caption": "Tłumaczenia oraz inne wkłady",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"text": "Bez nich, Pretendo nie byłoby w takim stanie jak teraz."
 	},
 	"discordJoin": {
 		"title": "Bądź na bieżąco",
@@ -246,7 +141,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Najnowsze informacje w krótkich tekstach. Jeśli chcesz otrzymywać częstsze aktualizacje, pomyśl nad wsparciem nas na <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreonie</a>.",
+		"description": "",
 		"published": "Opublikowany przez",
 		"publishedOn": "dnia"
 	},
@@ -332,7 +227,7 @@
 				"discord": "Discord",
 				"connectedToDiscord": "Połączono z Discordem jako",
 				"removeDiscord": "Usuń konto Discord",
-				"newsletter": "Newsletter",
+				"newsletter": "Biuletyn",
 				"linkDiscord": "Połącz konto Discord",
 				"newsletterPrompt": "Otrzymuj aktualizacje o projekcie przez email (możesz zrezygnować w dowolnym momencie)",
 				"passwordPrompt": "Wprowadź swoje hasło Pretendo Network ID, aby pobrać pliki Cemu"
@@ -347,7 +242,20 @@
 			"Moderator",
 			"Deweloper"
 		],
-		"banned": "Zbanowany"
+		"banned": "Zbanowany",
+		"forgotPassword": {
+			"header": "Zapomniałem hasła",
+			"sub": "Wpisz swój adres e-mail/PNID na dole",
+			"input": "Adres e-mail lub PNID",
+			"submit": "Potwierdź"
+		},
+		"resetPassword": {
+			"header": "Zresetuj hasło",
+			"sub": "Wpisz nowe hasło na dole",
+			"submit": "Potwierdź",
+			"confirmPassword": "Potwierdź hasło",
+			"password": "Hasło"
+		}
 	},
 	"upgrade": {
 		"unsub": "Anuluj subskrypcję",

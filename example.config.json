@@ -26,15 +26,19 @@
 		"account": {
 			"uri": "mongodb://127.0.0.1:27017",
 			"database": "database_name",
+			"connection_string": "mongodb://127.0.0.1:27017",
 			"options": {
 				"useNewUrlParser": true,
 				"useUnifiedTopology": true
 			}
 		}
 	},
-	"gmail": {
-		"user": "username",
-		"pass": "password",
+	"email": {
+		"ses": {
+			"region": "AWS SES us-east-1",
+			"key": "AWS SES access key",
+			"secret": "AWS SES secret key"
+		},
 		"from": "Firstname Lastname <user@domain.com>"
 	},
 	"trello": {

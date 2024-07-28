@@ -1,11 +1,14 @@
 process.title = 'Pretendo - Website';
+process.on('SIGTERM', () => {
+	process.exit(0);
+});
 
 const express = require('express');
 const handlebars = require('express-handlebars');
 const morgan = require('morgan');
 const expressLocale = require('express-locale');
 const cookieParser = require('cookie-parser');
-const Stripe = require('stripe');
+//const Stripe = require('stripe');
 const redirectMiddleware = require('./middleware/redirect');
 const renderDataMiddleware = require('./middleware/render-data');
 const database = require('./database');
@@ -15,7 +18,7 @@ const config = require('../config.json');
 
 const { http: { port } } = config;
 const app = express();
-const stripe = new Stripe(config.stripe.secret_key);
+//const stripe = new Stripe(config.stripe.secret_key);
 
 logger.info('Setting up Middleware');
 app.use(morgan('dev'));
@@ -31,15 +34,19 @@ app.use(expressLocale({
 	// Map unavailable regions to available locales from the same language
 	map: {
 		/* TODO: map more regions to the available locales */
-		en: 'en-US', 'en-GB': 'en-US', 'en-AU': 'en-US', 'en-CA': 'en-US',
+		en: 'en-US', 'en-AU': 'en-US', 'en-CA': 'en-US',
 		ar: 'ar-AR',
+		ca: 'ca-ES',
+		cs: 'cs-CZ',
 		cn: 'zh-CN',
 		de: 'de-DE',
 		nl: 'nl-NL',
 		es: 'es-ES',
 		fr: 'fr-FR', 'fr-CA': 'fr-FR', 'fr-CH': 'fr-FR',
+		fi: 'fi-FI',
 		it: 'it-IT', 'it-CH': 'it-IT',
 		ja: 'ja-JP',
+		kk: 'kk-KZ',
 		ko: 'ko-KR',
 		nb: 'nb-NO',
 		no: 'nb-NO',
@@ -47,25 +54,35 @@ app.use(expressLocale({
 		pt: 'pt-BR',
 		ro: 'ro-RO',
 		ru: 'ru-RU',
+		sr: 'sr-RS',
+		tr: 'tr-TR',
 		uk: 'uk-UA',
 	},
 	allowed: [
 		'en', 'en-US', 'en-GB', 'en-AU', 'en-CA',
 		'ar', 'ar-AR',
+		'ast',
+		'ca-ES',
+		'cs-CZ',
 		'cn', 'zh-CN', 'zh-HK', 'zh-TW',
 		'de', 'de-DE',
 		'nl', 'nl-NL',
 		'es', 'es-ES',
+		'fi', 'fi-FI',
 		'fr', 'fr-FR', 'fr-CA', 'fr-CH',
 		'it', 'it-IT', 'it-CH',
 		'ja', 'ja-JP',
+		'kk', 'kk-KZ',
 		'ko', 'ko-KR',
 		'nb', 'no', 'nb-NO',
 		'pl', 'pl-PL',
 		'pt', 'pt-BR',
 		'ro', 'ro-RO',
 		'ru', 'ru-RU',
+		'sr', 'sr-RS',
+		'tr', 'tr-TR',
 		'uk', 'uk-UA',
+		'en@uwu'
 	],
 	'default': 'en-US'
 }));
@@ -99,10 +116,9 @@ app.use('/nso-legacy-pack', routes.aprilfools);
 logger.info('Creating 404 status handler');
 // This works because it is the last router created
 // Meaning the request could not find a valid router
-app.use((request, response, next) => {
+app.use((request, response) => {
 	const fullUrl = util.fullUrl(request);
-	logger.warn(`HTTP 404 at ${fullUrl}`);
-	next();
+	response.render('404');
 });
 
 logger.info('Setting up handlebars engine');
@@ -136,8 +152,17 @@ app.engine('handlebars', handlebars({
 		neq(value1, value2) {
 			return value1 !== value2;
 		},
+		greaterThan(value1, value2) {
+			return value1 > value2;
+		},
 		slug(string) {
 			return string.toLowerCase().replaceAll(/ /g, '-');
+		},
+		section(name, options) {
+			if (!this._sections) this._sections = {};
+			if (!this._sections[name]) this._sections[name] = [];
+			this._sections[name].push(options.fn(this));
+			return null;
 		}
 	}
 }));
@@ -146,6 +171,7 @@ app.set('view engine', 'handlebars');
 logger.info('Starting server');
 database.connect().then(() => {
 	app.listen(port, async () => {
+		/*
 		const events = await stripe.events.list({
 			delivery_success: false // failed webhooks
 		});
@@ -153,6 +179,7 @@ database.connect().then(() => {
 		for (const event of events.data) {
 			await util.handleStripeEvent(event);
 		}
+		*/
 
 		logger.success(`Server listening on http://localhost:${port}`);
 	});

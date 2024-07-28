@@ -4,7 +4,12 @@
 	"description": "",
 	"main": "src/server.js",
 	"scripts": {
-		"start": "browserify ./public/assets/js/miieditor.js -o ./public/assets/js/miieditor.bundled.js && node src/server.js"
+		"start": "node src/server.js",
+		"build": "npm run browserify",
+		"browserify": "npm run browserify-miieditor && npm run browserify-forgot-password && npm run browserify-reset-password",
+		"browserify-miieditor": "browserify ./public/assets/js/miieditor.js -o ./public/assets/js/miieditor.bundled.js",
+		"browserify-forgot-password": "browserify ./public/assets/js/forgot-password.js -o ./public/assets/js/forgot-password.bundled.js",
+		"browserify-reset-password": "browserify ./public/assets/js/reset-password.js -o ./public/assets/js/reset-password.bundled.js"
 	},
 	"repository": {
 		"type": "git",
@@ -17,8 +22,10 @@
 	},
 	"homepage": "https://github.com/PretendoNetwork/website#readme",
 	"dependencies": {
+		"@aws-sdk/client-ses": "^3.515.0",
 		"@discordjs/rest": "^0.5.0",
-		"adm-zip": "^0.5.9",
+		"@node-saml/node-saml": "^5.0.0",
+		"@pretendonetwork/error-codes": "^1.0.3",
 		"browserify": "^17.0.0",
 		"colors": "^1.4.0",
 		"cookie-parser": "^1.4.5",
@@ -31,14 +38,13 @@
 		"got": "^11.8.5",
 		"graphql-request": "^4.3.0",
 		"gray-matter": "^4.0.3",
-		"kaitai-struct": "^0.9.0",
+		"lodash.merge": "^4.6.2",
 		"marked": "^4.0.10",
 		"mii-js": "github:PretendoNetwork/mii-js#v1.0.4",
 		"mongoose": "^6.4.0",
 		"morgan": "^1.10.0",
 		"nodemailer": "^6.7.5",
-		"stripe": "^9.9.0",
-		"uuid": "^8.3.2"
+		"stripe": "^9.9.0"
 	},
 	"devDependencies": {
 		"eslint": "^7.32.0"

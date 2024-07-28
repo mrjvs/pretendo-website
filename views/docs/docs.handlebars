@@ -1,9 +1,11 @@
-<link rel="stylesheet" href="/assets/css/documentation.css" />
+{{#section 'head'}}
+	<link rel="stylesheet" href="/assets/css/documentation.css" />
+{{/section}}
 
 <div class="docs-wrapper">
 
 	<a href="/" class="logo-link">
-		<svg xmlns="http://www.w3.org/2000/svg" width="120" height="39.876">
+		<svg role="img" aria-label="Pretendo" xmlns="http://www.w3.org/2000/svg" width="120" height="39.876">
 			<g id="logo_type" data-name="logo type" transform="translate(-553 -467)">
 				<g id="logo" transform="translate(553 467)">
 					<rect id="XMLID_158_" width="39.876" height="39.876" fill="#9d6ff3" opacity="0" />
@@ -48,9 +50,11 @@
 	</div>
 </div>
 
-<script src="/assets/js/docssidebarhandler.js"></script>
+{{#section 'foot'}}
+	<script src="/assets/js/docssidebarhandler.js"></script>
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
-<link rel="stylesheet" href="/assets/css/highlightjs.css">
-<script>hljs.highlightAll();</script>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+	<link rel="stylesheet" href="/assets/css/highlightjs.css">
+	<script>hljs.highlightAll();</script>
+{{/section}}

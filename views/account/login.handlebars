@@ -1,11 +1,12 @@
-<link rel="stylesheet" href="/assets/css/login.css" />
+{{#section 'head'}}
+	<link rel="stylesheet" href="/assets/css/login.css" />
+{{/section}}
 
 {{> header}}
 
 <div class="wrapper">
-
 	<div class="account-form-wrapper">
-		<form action="/account/login" method="post" class="account">
+		<form action="{{ loginPath }}" method="post" class="account">
 			<h2>{{ locale.account.loginForm.login }}</h2>
 			<p>{{ locale.account.loginForm.detailsPrompt }}</p>
 			<div>
@@ -15,14 +16,16 @@
 			<div>
 				<label for="password">{{ locale.account.loginForm.password }}</label>
 				<input name="password" id="password" type="password" required>
-				<a href="/account/passwordreset" class="pwdreset">{{ locale.account.loginForm.forgotPassword }}</a>
+				<a href="/account/forgot-password" class="pwdreset">{{ locale.account.loginForm.forgotPassword }}</a>
 			</div>
 			<input name="grant_type" id="grant_type" type="hidden" value="password">
 			<input name="redirect" id="redirect" type="hidden" value="{{redirect}}">
 			<div class="buttons">
 				<button type="submit">{{ locale.account.loginForm.login }}</button>
-			<a href="/account/register{{#if redirect}}?redirect={{redirect}}{{/if}}" class="register">{{ locale.account.loginForm.registerPrompt }}</a>
+				<a href="/account/register{{#if redirect}}?redirect={{redirect}}{{/if}}" class="register">{{ locale.account.loginForm.registerPrompt }}</a>
 			</div>
+			<input type="hidden" id="discourse-sso-payload" name="discourse-sso-payload" value="{{ discourse.payload }}" />
+			<input type="hidden" id="discourse-sso-signature" name="discourse-sso-signature" value="{{ discourse.signature }}" />
 		</form>
 	</div>
 </div>

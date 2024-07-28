@@ -39,10 +39,6 @@
 	},
 	"progress": {
 		"title": "Progresso",
-		"paragraphs": [
-			null,
-			"Per la 3DS stiamo anche lavorando su Mario Kart 7, e vorremmo continuare a lavorare su altri giochi quando possibile."
-		],
 		"githubRepo": "Repository GitHub"
 	},
 	"faq": {
@@ -67,7 +63,7 @@
 			},
 			{
 				"question": "Pretendo funziona su Cemu/emulatori?",
-				"answer": "Pretendo è sviluppata con l'hardware Wii U e 3DS in mente; in questo momento l'unico emulatore per queste console che supporta NN è Cemu. Cemu non supporta server custom ufficialmente, ma dovrebbe comunque essere possibile utilizzare Pretendo con Cemu .<br>Al momento Pretendo non supporta Cemu."
+				"answer": "Pretendo supporta qualsiasi client in grado di connettersi a Nintendo Network. Al momento l'unico emulatore con questa capacità è Cemu. Cemu 2.0 supporta ufficialmente Pretendo nelle opzioni dell'account di rete dell'emulatore. Per informazioni su come impostare Pretendo su Cemu, visita la <a href=\"https://pretendo.network/docs/install/cemu\">documentazione</a>.<br>Citra non supporta le funzionalità di gioco online reali, quindi non funziona con Pretendo; inoltre, non mostra segni di poter funzionare in futuro. Mikage, un emulatore di 3DS per dispositivi mobili, potrebbe fornire supporto in futuro, ma questo è tutt'altro che certo."
 			},
 			{
 				"question": "Se sono bannato su Nintendo Network, rimarrò bannato quando userò Pretendo?",
@@ -103,115 +99,14 @@
 	},
 	"credits": {
 		"title": "Il team",
-		"text": "Incontra il team dietro al progetto",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Proprietario del progetto e sviluppatore principale",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Ricerca e sviluppo Miiverse",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Installer della rete e ricerca su console",
-				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/Rambo6Glaz"
-			},
-			{
-				"name": "quarky",
-				"caption": "Ricerca BOSS e sviluppo patch",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Ricerca su console e altri sistemi",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "Jip Fr",
-				"caption": "Leader dello sviluppo web",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
-				"name": "monty",
-				"caption": "Sviluppo web",
-				"picture": "https://github.com/ashmonty.png",
-				"github": "https://github.com/ashmonty"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Disegnatore",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			}
-		]
+		"text": "Incontra il team dietro al progetto"
 	},
 	"specialThanks": {
 		"title": "Ringraziamenti speciali",
-		"text": "Senza di loro, Pretendo non sarebbe dove è oggi.",
-		"people": [
-			{
-				"name": "superwhiskers",
-				"caption": "Sviluppo della libreria crunch",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "Sviluppo 3DS e dissettore NEX",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "Conservazionista",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Ricerca su Mario Kart 7 e 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "rverse",
-				"caption": "Condivisione di informazioni su Miiverse",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Ringraziamenti speciali",
-				"caption": "Ricerca su strutture dati Nintendo",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Icone per l'editor Mii e le reazioni su Juxt",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Contributori su GitHub",
-				"caption": "Localizzazioni e altre contribuzioni",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"text": "Senza di loro, Pretendo non sarebbe dove è oggi."
 	},
 	"discordJoin": {
-		"title": "Tienti aggiornato",
+		"title": "Tieniti aggiornato",
 		"text": "Unisciti al nostro server su Discord per ottenere gli ultimi aggiornamenti sul progetto.",
 		"widget": {
 			"text": "Ricevi aggiornamenti in tempo reale sul nostro progresso",
@@ -246,7 +141,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Gli ultimi aggiornamenti in blocchi condensati. Se vuoi ricevere aggiornamenti più frequenti, considera di supportarci su <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "Gli ultimi aggiornamenti in blocchi condensati. Se vuoi ricevere aggiornamenti più frequenti, considera di <a href=\"/account/upgrade\" target=\"_blank\">supportarci</a>.",
 		"published": "Pubblicato da",
 		"publishedOn": "il"
 	},
@@ -298,7 +193,7 @@
 				"removeDiscord": "Rimuovi account Discord",
 				"noDiscordLinked": "Nessun account Discord collegato.",
 				"linkDiscord": "Collega account Discord",
-				"newsletter": "Newsletter",
+				"newsletter": "Notizie",
 				"newsletterPrompt": "Ricevi aggiornamenti sul progetto via email (puoi annullare in qualunque momento)",
 				"passwordPrompt": "Inserisci la tua password PNID per scaricare i file per Cemu",
 				"userSettings": "Impostazioni utente",
@@ -309,7 +204,20 @@
 			"upgrade": "Fai l'upgrade del tuo account",
 			"unavailable": "Non disponibile"
 		},
-		"account": "Account"
+		"account": "Account",
+		"forgotPassword": {
+			"header": "Password Dimenticata",
+			"sub": "Inserisci qua sotto il tuo indirizzo email o PNID",
+			"input": "Indirizzo email o PNID",
+			"submit": "Invia"
+		},
+		"resetPassword": {
+			"header": "Ripristino password",
+			"sub": "Inserisci qua sotto la nuova password",
+			"password": "Password",
+			"submit": "Invia",
+			"confirmPassword": "Conferma password"
+		}
 	},
 	"localizationPage": {
 		"title": "Localizziamo",

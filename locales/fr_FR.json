@@ -63,7 +63,7 @@
 			},
 			{
 				"question": "Est-ce que Pretendo fonctionne sur Cemu/émulateurs ?",
-				"answer": "Pretendo est conçu pour la Wii U et la 3DS ; pour le moment, le seul émulateur pour ces consoles qui supporte le NN est Cemu. Cemu ne prend pas officiellement en charge les serveurs personnalisés, mais il devrait être possible d'utiliser Pretendo avec Cemu.<br>Pretendo ne prend pas en charge Cemu actuellement."
+				"answer": "Pretendo supporte n'importe quel client qui peut interagir avec le Nintendo Network. Actuellement, le seul émulateur avec cette fonctionnalité est Cemu. Cemu 2.0 supporte officiellement Pretendo dans les paramètres de votre compte dans l'émulateur. Pour plus d'informations sur l'utilisation de Cemu, visitez <a href=\"https://pretendo.network/docs/install/cemu\">la documentation</a>.<br> Citra ne supporte pas véritablement le jeu en ligne et ne fonctionne donc pas Pretendo, et l'émulateur ne semble pas présenter de signes d'un support prochain. Mikage, un émulateur 3DS pour appareils mobiles, sera peut-être compatible dans le futur, néanmoins cela reste incertain."
 			},
 			{
 				"question": "Si je suis banni du Nintendo Network, resterai-je banni lorsque j'utiliserai Pretendo ?",
@@ -99,112 +99,11 @@
 	},
 	"credits": {
 		"title": "L'équipe",
-		"text": "Rencontrez l'équipe derrière le projet",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Chef de projet et développeur principal",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Étude et développement sur Miiverse",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Installateur du réseau et études des consoles",
-				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/Rambo6Glaz"
-			},
-			{
-				"name": "quarky",
-				"caption": "Recherche de BOSS et développement de correctifs",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Étude des consoles et d'autres systèmes",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "Jip Fr",
-				"caption": "Chef de développement Web",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
-				"name": "monty",
-				"caption": "Développement Web",
-				"picture": "https://github.com/ashmonty.png",
-				"github": "https://github.com/ashmonty"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Designer",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			}
-		]
+		"text": "Rencontrez l'équipe derrière le projet"
 	},
 	"specialThanks": {
-		"title": "Remerciement spécial",
-		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui.",
-		"people": [
-			{
-				"name": "superwhiskers",
-				"caption": "Développement de la bibliothèque crunch",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "Developpeur 3DS et dissecteur de NEX",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "Fournisseur de dumps",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Étude de Mario Kart 7 et de la 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "rverse",
-				"caption": "Partage d'information Miiverse",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Remerciement spéciaux",
-				"caption": "Étude des structures de données de Nintendo",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Icônes pour l'éditeur Mii et les réactions Juxt",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Contributeurs GitHub",
-				"caption": "Localisations et autres contributions",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"title": "Remerciements spéciaux",
+		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui."
 	},
 	"discordJoin": {
 		"title": "Tiens-toi à jour",
@@ -242,7 +141,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Les dernières mises à jour en blocs condensés. Si vous souhaitez voir des mises à jour plus fréquentes, envisagez de nous soutenir sur <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "Les dernières mises à jour en blocs condensés. Si vous souhaitez voir des mises à jour plus fréquentes, envisagez <a href=\"/account/upgrade\" target=\"_blank\">de nous soutenir</a>.",
 		"publishedOn": "le",
 		"published": "Publié par"
 	},
@@ -343,7 +242,20 @@
 			"Modérateur",
 			"Développeur"
 		],
-		"account": "Compte"
+		"account": "Compte",
+		"forgotPassword": {
+			"input": "Adresse mail ou PNID",
+			"submit": "Soumettre",
+			"header": "Mot de passe oublié",
+			"sub": "Entrez votre adresse email/PNID ci-dessous"
+		},
+		"resetPassword": {
+			"header": "Réinitialiser le mot de passe",
+			"sub": "Entrez le nouveau mot de passe ci-dessous",
+			"password": "Mot de Passe",
+			"confirmPassword": "Confirmez le mot de passe",
+			"submit": "Soumettre"
+		}
 	},
 	"upgrade": {
 		"title": "Mise à Niveau",

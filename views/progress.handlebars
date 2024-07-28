@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="/assets/css/progress.css">
+{{#section 'head'}}
+	<link rel="stylesheet" href="/assets/css/progress.css">
+{{/section}}
 
 {{> header}}
 
@@ -14,9 +16,10 @@
 
 	<div class="all-progress-lists">
 		<div class="donation-progress">
-			<h1 class="title dot">Donation goal</h1>
-			<div class="progress-bar">
-				<div class="progress-bar-inner" style="width: {{ donationCache.completed_capped }}%;" ></div>
+			<h1 class="title dot">Donation goal {{#if (greaterThan donationCache.completed_real 99) }}<img src="/assets/images/ganon.apng" alt="An animated image of Cucuí Ganon dancing" class="cucui-dance" />{{/if}}</h1>
+			<div class="progress-bar" style="--progress-bar-width: {{ donationCache.completed_real }}%;">
+				{{#if (greaterThan donationCache.completed_real 100) }}<div class="progress-bar-real"></div>{{/if}}
+				<div class="progress-bar-capped"></div>
 			</div>
 			<p class="localeReplace">{{{ locale.donation.progress }}} {{{ locale.donation.upgradePush }}}</p>
 		</div>
@@ -43,12 +46,14 @@
 
 </div>
 
-<script>
-	/* this jank is needed to have data mixed in with a localized string */
-	document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
-		.replace('${totd}', '{{donationCache.total_dollars}}');
-	document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
-		.replace('${goald}', '{{donationCache.goal_dollars}}');
-	document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
-		.replace('${perc}', '{{donationCache.completed_real}}');
-</script>
+{{#section 'foot'}}
+	<script>
+		/* this jank is needed to have data mixed in with a localized string */
+		document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
+			.replace('${totd}', '{{donationCache.total_dollars}}');
+		document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
+			.replace('${goald}', '{{donationCache.goal_dollars}}');
+		document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
+			.replace('${perc}', '{{donationCache.completed_real}}');
+	</script>
+{{/section}}

@@ -55,12 +55,16 @@
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
 		<!-- Twemoji setup -->
-		<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@twemoji/api@15.0.2/dist/twemoji.min.js" integrity="sha384-D6GSzpW7fMH86ilu73eB95ipkfeXcMPoOGVst/L04yqSSe+RTUY0jXcuEIZk0wrT" crossorigin="anonymous"></script>
 		<script>
 			window.onload = function() {
 				twemoji.parse(document.body, {folder: 'svg', ext: '.svg'});
 			}
 		</script>
+
+		{{#each _sections.head}}
+			{{{this}}}
+		{{/each}}
 	</head>
 	<body>
 		<div class="main-body">
@@ -68,6 +72,10 @@
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
 		<script src="/assets/js/progress-charts.js"></script>
+
+		{{#each _sections.foot}}
+			{{{this}}}
+		{{/each}}
 
 	</body>
 </html>
